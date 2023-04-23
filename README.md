@@ -4,14 +4,21 @@
 ## Descripción
 Este es un proyecto de API REST para la entidad Profesor, que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en una base de datos.
 
-## Instalación
-Para poder utilizar esta API, se necesita tener Python 3.x y Django 3.x instalados. Para instalar Django, se puede utilizar el siguiente comando en la línea de comandos:
+## Paquetes necesarios
 
-```
-pip install django
-```
+| Package | Version |
+|---------|---------|
+| asgiref | 3.6.0   |
+| Django  | 4.2     |
+| mysqlclient | 2.1.1 |
+| pip     | 23.1.1  |
+| PyMySQL | 1.0.3   |
+| setuptools | 67.6.1 |
+| sqlparse | 0.4.4   |
+| tzdata  | 2023.3  |
+| wheel   | 0.40.0  |
 
-## URLs
+## PETICIONES
 
 ### `GET /`
 Obtiene una lista de todos los profesores.
