@@ -18,7 +18,7 @@ Este es un proyecto de API REST para la entidad Profesor, que permite realizar o
 | tzdata  | 2023.3  |
 | wheel   | 0.40.0  |
 
-## PETICIONES
+## URLs
 
 ### `GET /`
 Obtiene una lista de todos los profesores.
