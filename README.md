@@ -40,7 +40,7 @@ Vista que maneja las operaciones CRUD para la entidad Profesor.
 
 #### Métodos
 
-##### `GET`
+## GET
 
 Obtiene una lista de todos los profesores o los datos de un profesor específico si se proporciona el ID del profesor como parámetro en la URL.
 
@@ -115,7 +115,7 @@ Content-Type: application/json
 
 Continuando la documentación:
 
-#### POST
+## POST
 
 El método `POST` crea un nuevo profesor con los datos proporcionados en el cuerpo de la solicitud. 
 
@@ -161,7 +161,7 @@ Content-Length: 19
     "message": "Success"
 }
 ```
-#### PUT
+## PUT
 El método `PUT` se utiliza para actualizar los datos de un profesor existente en la base de datos.
 
 ### Parámetros
