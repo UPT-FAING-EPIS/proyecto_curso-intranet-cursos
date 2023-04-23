@@ -48,9 +48,8 @@ Parámetros:
 - `CodigoDocente` (int): ID del profesor.
 
 Respuestas:
-- 200 OK: Si se proporciona el ID del profesor, devuelve los datos de ese profesor en formato JSON.
+- 200 OK: Si se proporciona el ID del profesor, devuelve uno o mas datos de ese profesor en formato JSON.
 - 404 Not Found: Si se proporciona un ID de profesor que no existe.
-- 200 OK: Si no se proporciona ningún ID de profesor, devuelve una lista de todos los profesores en formato JSON.
 
 Ejemplo de petición:
 
