@@ -23,13 +23,13 @@ Este es un proyecto de API REST para la entidad Profesor, que permite realizar o
 ### `GET /`
 Obtiene una lista de todos los profesores.
 
-### `GET /<int:CodigoDocente>`
+### `GET /<int:CodigoProfesor>`
 Obtiene los datos de un profesor específico.
 
 ### `POST /`
 Crea un nuevo profesor.
 
-### `PUT /<int:CodigoDocente>`
+### `PUT /<int:CodigoProfesor>`
 Actualiza los datos de un profesor existente.
 
 ## Vistas
@@ -45,7 +45,7 @@ Vista que maneja las operaciones CRUD para la entidad Profesor.
 Obtiene una lista de todos los profesores o los datos de un profesor específico si se proporciona el ID del profesor como parámetro en la URL.
 
 Parámetros:
-- `CodigoDocente` (int): ID del profesor.
+- `CodigoProfesor` (int): ID del profesor.
 
 Respuestas:
 - 200 OK: Si se proporciona el ID del profesor, devuelve uno o mas datos de ese profesor en formato JSON.
@@ -68,20 +68,20 @@ Content-Type: application/json
 {
     "Profesores": [
         {
-            "CodigoDocente": 1,
-            "NombreDocente": "Juan",
-            "ApellidoDocente": "Pérez",
-            "EmailDocente": "juan.perez@example.com",
-            "NumeroDocente": "1234567890",
-            "DireccionDocente": "Calle 123"
+            "CodigoProfesor": 1,
+            "NombreProfesor": "Juan",
+            "ApellidoProfesor": "Pérez",
+            "EmailProfesor": "juan.perez@example.com",
+            "NumeroProfesor": "1234567890",
+            "DireccionProfesor": "Calle 123"
         },
         {
-            "CodigoDocente": 2,
-            "NombreDocente": "María",
-            "ApellidoDocente": "González",
-            "EmailDocente": "maria.gonzalez@example.com",
-            "NumeroDocente": "0987654321",
-            "DireccionDocente": "Avenida 456"
+            "CodigoProfesor": 2,
+            "NombreProfesor": "María",
+            "ApellidoProfesor": "González",
+            "EmailProfesor": "maria.gonzalez@example.com",
+            "NumeroProfesor": "0987654321",
+            "DireccionProfesor": "Avenida 456"
         }
     ]
 }
@@ -103,12 +103,12 @@ Content-Type: application/json
 
 {
     "Profesores": {
-        "CodigoDocente": 1,
-        "NombreDocente": "Juan",
-        "ApellidoDocente": "Pérez",
-        "EmailDocente": "juan.perez@example.com",
-        "NumeroDocente": "1234567890",
-        "DireccionDocente": "Calle 123"
+        "CodigoProfesor": 1,
+        "NombreProfesor": "Juan",
+        "ApellidoProfesor": "Pérez",
+        "EmailProfesor": "juan.perez@example.com",
+        "NumeroProfesor": "1234567890",
+        "DireccionProfesor": "Calle 123"
     }
 }
 ```
@@ -123,11 +123,11 @@ El método `POST` crea un nuevo profesor con los datos proporcionados en el cuer
 
 Los siguientes parámetros deben ser proporcionados en el cuerpo de la solicitud en formato JSON:
 
-- `NombreDocente` (string): Nombre del profesor.
-- `ApellidoDocente` (string): Apellido del profesor.
-- `EmailDocente` (string): Email del profesor.
-- `NumeroDocente` (string): Número de teléfono del profesor.
-- `DireccionDocente` (string): Dirección del profesor.
+- `NombreProfesor` (string): Nombre del profesor.
+- `ApellidoProfesor` (string): Apellido del profesor.
+- `EmailProfesor` (string): Email del profesor.
+- `NumeroProfesor` (string): Número de teléfono del profesor.
+- `DireccionProfesor` (string): Dirección del profesor.
 
 ##### Ejemplo de solicitud
 
@@ -138,11 +138,11 @@ Content-Type: application/json
 Content-Length: 102
 
 {
-    "NombreDocente": "Juan",
-    "ApellidoDocente": "Perez",
-    "EmailDocente": "juan.perez@example.com",
-    "NumeroDocente": "123456789",
-    "DireccionDocente": "Calle 123, Ciudad"
+    "NombreProfesor": "Juan",
+    "ApellidoProfesor": "Perez",
+    "EmailProfesor": "juan.perez@example.com",
+    "NumeroProfesor": "123456789",
+    "DireccionProfesor": "Calle 123, Ciudad"
 }
 ```
 
@@ -166,15 +166,15 @@ El método `PUT` se utiliza para actualizar los datos de un profesor existente e
 
 ### Parámetros
 
-- `CodigoDocente` (int): El ID del profesor que se desea actualizar.
+- `CodigoProfesor` (int): El ID del profesor que se desea actualizar.
 
 En el cuerpo de la solicitud se deben proporcionar los siguientes parámetros:
 
-- `NombreDocente` (string): El nuevo nombre del profesor.
-- `ApellidoDocente` (string): El nuevo apellido del profesor.
-- `EmailDocente` (string): El nuevo email del profesor.
-- `NumeroDocente` (string): El nuevo número de teléfono del profesor.
-- `DireccionDocente` (string): La nueva dirección del profesor.
+- `NombreProfesor` (string): El nuevo nombre del profesor.
+- `ApellidoProfesor` (string): El nuevo apellido del profesor.
+- `EmailProfesor` (string): El nuevo email del profesor.
+- `NumeroProfesor` (string): El nuevo número de teléfono del profesor.
+- `DireccionProfesor` (string): La nueva dirección del profesor.
 
 ### Respuestas
 
@@ -192,10 +192,10 @@ Content-Type: application/json
 Authorization: Token xxxxxxxxxxxxxxxxxxxxxxxx
 
 {
-    "NombreDocente": "Juan",
-    "ApellidoDocente": "Pérez",
-    "EmailDocente": "juan.perez@example.com",
-    "NumeroDocente": "1234567890",
-    "DireccionDocente": "Calle 123"
+    "NombreProfesor": "Juan",
+    "ApellidoProfesor": "Pérez",
+    "EmailProfesor": "juan.perez@example.com",
+    "NumeroProfesor": "1234567890",
+    "DireccionProfesor": "Calle 123"
 }
 ```
