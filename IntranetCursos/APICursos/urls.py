@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import APICursosViews
 urlpatterns=[
-    path('',APICursosViews.as_view(),name='profesores_lists'),
-    #guia = path('<int:CodDocente>',APICreditosViews.as_view(), name='profesores_process')
+    path('',APICursosViews.as_view(),name='Cursos_lists'),
+    path('<str:CodigoCurso>',APICursosViews.as_view(), name='Cursos_perCod')
 ]
