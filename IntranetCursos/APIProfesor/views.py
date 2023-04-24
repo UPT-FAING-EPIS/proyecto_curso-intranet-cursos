@@ -31,7 +31,7 @@ class APIProfesorViews(View):
     
     def post(self, request):
         jd=json.loads(request.body)
-        TbProfesor.objects.create(NombreProfesor=jd['NombreProfesor'],ApellidoProfesor=jd['ApellidoProfesor'],EmailProfesor=jd['EmailProfesor'],NumeroProfesor=jd['NumeroProfesor'],DireccionProfesor=jd['DireccionProfesor'])
+        TbProfesor.objects.create(NombreProfesor=jd['NombreProfesor'],ApellidoProfesor=jd['ApellidoProfesor'],EmailProfesor=jd['EmailProfesor'],NumeroProfesor=jd['NumeroProfesor'],DireccionProfesor=jd['DireccionProfesor'],TbEstado=jd['TbEstado'])
         datos={
                 'messaje': 'Success'
             }
@@ -47,6 +47,7 @@ class APIProfesorViews(View):
             prof.EmailProfesor=jd['EmailProfesor']
             prof.NumeroProfesor=jd['NumeroProfesor']
             prof.DireccionProfesor=jd['DireccionProfesor']
+            prof.TbEstado=jd['TbEstado']
             prof.save()
             datos={'messaje': 'Success'}
         else:
