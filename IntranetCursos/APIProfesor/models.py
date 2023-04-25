@@ -9,7 +9,7 @@ class TbProfesor(models.Model):
     EmailProfesor= models.CharField(max_length=50)
     NumeroProfesor= models.PositiveIntegerField()
     DireccionProfesor= models.CharField(max_length=50)
-    TbEstado = models.ForeignKey(TbEstado, on_delete=models.CASCADE)
+    FkEstado_id = models.ForeignKey(TbEstado, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'TbProfesor'
