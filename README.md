@@ -72,7 +72,7 @@ Content-Type: application/json
       "PreRequisitoCurso": "Ninguno",
       "CicloCurso": "I",
       "CodigoProfesor_id": 1,
-      "TbEstado_id": 1
+      "FkEstado_id": 1
     },
     {
       "CodigoCurso": "EG-182",
@@ -81,7 +81,7 @@ Content-Type: application/json
       "PreRequisitoCurso": "Ninguno",
       "CicloCurso": "I",
       "CodigoProfesor_id": 2,
-      "TbEstado_id": 1
+      "FkEstado_id": 1
     },
     ]
 }
@@ -108,7 +108,7 @@ Content-Type: application/json
     "PreRequisitoCurso": "Ninguno",
     "CicloCurso": "X",
     "CodigoProfesor_id": 8,
-    "TbEstado_id": 1
+    "FkEstado_id": 1
   }
 }
 ```
@@ -128,7 +128,7 @@ Los siguientes parámetros deben ser proporcionados en el cuerpo de la solicitud
 - `THCurso` (int): Horas Totales del curso
 - `PreRequisitoCurso` (string): Prerequisito para llevar el curso.
 - `CodigoProfesor` (int): Codigo del profesor.
-- `TbEstado` (int): Estado del Curso.
+- `FkEstado` (int): Estado del Curso.
 
 ##### Ejemplo de solicitud
 
@@ -144,7 +144,7 @@ Content-Length: 102
       "PreRequisitoCurso": "Ninguno",
       "CicloCurso": "Electivo",
       "CodigoProfesor": 2,
-      "TbEstado": 1
+      "FkEstado_id": 1
 }
 ```
 
@@ -175,7 +175,7 @@ En el cuerpo de la solicitud se deben proporcionar los siguientes parámetros:
 - `THCurso` (int): Horas Totales del curso
 - `PreRequisitoCurso` (string): Prerequisito para llevar el curso.
 - `CodigoProfesor` (int): Codigo del profesor.
-- `TbEstado` (int): Estado del Curso.
+- `FkEstado` (int): Estado del Curso.
 
 ### Respuestas
 
@@ -198,6 +198,6 @@ Authorization: Token xxxxxxxxxxxxxxxxxxxxxxxx
     "PreRequisitoCurso": "Ninguno",
     "CicloCurso": "X",
     "CodigoProfesor_id": 8,
-    "TbEstado_id": 1
+    "FkEstado_id": 1
 }
 ```

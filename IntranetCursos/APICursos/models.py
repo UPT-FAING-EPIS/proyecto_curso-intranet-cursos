@@ -14,6 +14,6 @@ class TbCursos(models.Model):
     PreRequisitoCurso= models.CharField(max_length=255)
     CicloCurso= models.CharField(max_length=255)
     CodigoProfesor= models.ForeignKey(TbProfesor, on_delete=models.CASCADE)
-    TbEstado= models.ForeignKey(TbEstado, on_delete=models.CASCADE)
+    FkEstado= models.ForeignKey(TbEstado, on_delete=models.CASCADE)
     class Meta:
         db_table = 'TbCursos'

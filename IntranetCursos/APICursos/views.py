@@ -33,7 +33,7 @@ class APICursosViews(View):
         jd=json.loads(request.body)
         TbCursos.objects.create(CodigoCurso=jd['CodigoCurso'],NombreCurso=jd['NombreCurso'],
                                 THCurso=jd['THCurso'],PreRequisitoCurso=jd['PreRequisitoCurso'],
-                                CicloCurso=jd['CicloCurso'],CodigoProfesor_id=jd['CodigoProfesor'],TbEstado_id=jd['TbEstado'])
+                                CicloCurso=jd['CicloCurso'],CodigoProfesor_id=jd['CodigoProfesor'],FkEstado_id=jd['FkEstado'])
         datos={
                 'messaje': 'Success'
             }
@@ -50,7 +50,7 @@ class APICursosViews(View):
             curs.PreRequisitoCurso=jd['PreRequisitoCurso']
             curs.CicloCurso=jd['CicloCurso']
             curs.CodigoProfesor_id=jd['CodigoProfesor']
-            curs.TbEstado_id=jd['TbEstado']
+            curs.FkEstado_id=jd['FkEstado']
             curs.save()
             datos={'messaje': 'Success'}
         else:
