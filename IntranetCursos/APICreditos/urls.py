@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import APICreditosViews
+from .views import CreditoViews
+
 urlpatterns=[
-    path('',APICreditosViews.as_view(),name='profesores_lists')
-    #guia = path('<int:CodDocente>',APICreditosViews.as_view(), name='profesores_process')
+    path('creditos/',CreditoViews.as_view(), name='creditos_lists'),
+    path('creditos/<int:CodCredito>',CreditoViews.as_view(), name='creditos_process')
 ]
