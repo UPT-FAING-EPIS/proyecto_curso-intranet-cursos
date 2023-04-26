@@ -1,4 +1,4 @@
-# API REST Cursos - Hecho por Diego Aranda Reyes
+# API REST Cursos 
 
 ## Descripción
 Este es un proyecto de API REST para la entidad Curso, que permite realizar operaciones CRUD (Crear, Leer y Actualizar ) en una base de datos.
