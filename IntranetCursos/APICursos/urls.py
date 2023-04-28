@@ -1,5 +1,6 @@
 from django.urls import path, include
 from .models import TbCursos
+from .models import TbProfesor
 from rest_framework import routers, serializers, viewsets
 from APIProfesor.urls import ProfesorSerializer
 
@@ -11,13 +12,13 @@ class TbEstadoSerializer(serializers.ModelSerializer):
         fields = ('IdEstado', 'Estado')
 
 # Serializers define the API representation.
-class CursosSerializer(serializers.HyperlinkedModelSerializer):
-    CodigoProfesor=ProfesorSerializer()
-    FkEstado=TbEstadoSerializer()
+class CursosSerializer(serializers.ModelSerializer):
+    CodigoProfesor = serializers.PrimaryKeyRelatedField(queryset=TbProfesor.objects.all())
+    FkEstado = serializers.PrimaryKeyRelatedField(queryset=TbEstado.objects.all())
 
     class Meta:
         model = TbCursos
-        fields = ('CodigoCurso', 'NombreCurso', 'THCurso', 'PreRequisitoCurso', 'CicloCurso', 'CodigoProfesor','FkEstado')
+        fields = ('CodigoCurso', 'NombreCurso', 'THCurso', 'PreRequisitoCurso', 'CicloCurso', 'CodigoProfesor', 'FkEstado')
 
 # ViewSets define the view behavior.
 class CursosViewSet(viewsets.ModelViewSet):
