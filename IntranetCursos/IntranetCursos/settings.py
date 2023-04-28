@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z)rjgx7wk@@9z$tzpw23ea4qb^98h=b7x@80*+3z5bp6pb$s23'
+SECRET_KEY = 'django-insecure-a$ycarntknk+j29vul@anuvlfcx_4g27f_nxj=lqm6pvh%ekfj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'APICreditos',
     'APIProfesor',
     'APIDetalleCreditos',
-    'APICursos'
+    'APICursos',
+    'drf_yasg'
+
 ]
 
 MIDDLEWARE = [
@@ -80,16 +83,17 @@ WSGI_APPLICATION = 'IntranetCursos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'localhost',
+        'HOST':'djangoapicursos.czl4va1sgad6.us-east-1.rds.amazonaws.com',
         'PORT':'3306',
-        'USER':'root',
-        'PASSWORD':'',
-        'NAME':'apicursos',
+        'USER':'admin',
+        'PASSWORD':'qwertyuiop',
+        'NAME':'ApiCursos2',
         'OPTIONS':{
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

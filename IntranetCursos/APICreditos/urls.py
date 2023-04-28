@@ -1,7 +1,25 @@
-from django.urls import path
-from .views import CreditoViews
+from django.urls import path, include
+from .models import TbCreditos
+from rest_framework import routers, serializers, viewsets
 
-urlpatterns=[
-    path('',CreditoViews.as_view(), name='creditos_lists'),
-    path('<int:CodCredito>',CreditoViews.as_view(), name='creditos_process')
+# Serializers define the API representation.
+class CreditosSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TbCreditos
+        fields = '__all__'
+
+# ViewSets define the view behavior.
+class CreditosViewSet(viewsets.ModelViewSet):
+    queryset = TbCreditos.objects.all()
+    serializer_class = CreditosSerializer
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register('TbCreditos', CreditosViewSet)
+
+# Wire up our API using automatic URL routing.
+# Additionally, we include login URLs for the browsable API.
+
+urlpatterns = [
+    path('', include(router.urls))
 ]
