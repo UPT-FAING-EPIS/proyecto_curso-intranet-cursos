@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST':'helbert.sytes.net',
         'PORT':'3306',
-        'USER':'DBHUB_USER',
-        'PASSWORD':'DBHUB_PASSWORD',
+        'USER':'dbAPI',
+        'PASSWORD':'APIdb',
         'NAME':'ApiCursos2',
         'OPTIONS':{
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
