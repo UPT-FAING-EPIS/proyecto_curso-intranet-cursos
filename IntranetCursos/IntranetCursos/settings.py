@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'IntranetCursos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'djangoapicursos.czl4va1sgad6.us-east-1.rds.amazonaws.com',
+        'HOST':'helbert.sytes.net',
         'PORT':'3306',
-        'USER':'admin',
-        'PASSWORD':'qwertyuiop',
+        'USER':'DBHUB_USER',
+        'PASSWORD':'DBHUB_PASSWORD',
         'NAME':'ApiCursos2',
         'OPTIONS':{
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
