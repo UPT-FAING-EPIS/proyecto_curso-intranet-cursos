@@ -30,4 +30,4 @@ jobs:
           context: .
           file: ./IntranetCursos/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/APICursos:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/apicursos_123:latest
