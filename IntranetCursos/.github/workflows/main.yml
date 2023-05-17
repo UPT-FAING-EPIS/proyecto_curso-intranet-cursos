@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile
+          file: ./IntranetCursos/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/appbanca:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/APICursos:latest
