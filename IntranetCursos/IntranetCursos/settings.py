@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'IntranetCursos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'helbert.sytes.net',
+        'HOST':'helbert.info',
         'PORT':'3306',
         'USER':'dbAPI',
         'PASSWORD':'APIdb',
