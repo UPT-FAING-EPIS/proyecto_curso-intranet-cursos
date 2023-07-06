@@ -1,6 +1,14 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/7qywsEwv)
 # API REST Cursos 
+Docente:
 
+  Ing. Patrick Cuadros Quiroga
+
+Alumnos : 
+  Diego Andre Aranda Reyes           2019063855
+  Helbert Andres Condori Loayza      2020067571
+  Erick Mauricio Mamani Lima         2020066321
+ 
 ## Descripción
 Este es un proyecto de API REST para la entidad Curso, que permite realizar operaciones CRUD (Crear, Leer y Actualizar ) en una base de datos.
 
